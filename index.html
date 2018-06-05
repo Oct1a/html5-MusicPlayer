@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale =1,maximum-scale=1,user-scalable=no" />
+		<title>音乐播放器</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		 <script src="js/jquery.min.js"></script>
+		 <script src="js/lrc.js"></script>
+	</head>
+	<body>
+		<!--
+			音乐播放器—功能实现
+			播放暂停（点击后切换状态）
+			下一首（切换下一首）
+			随机播放 （当前歌曲播放完自动播放下一曲）
+			单曲循环（点击图标可切换成单曲循环）
+			音量调节（鼠标移入滑动设置音量大小）
+			歌曲进度条（可点击切换进度直接跳，也可以点击小圆点拖拽切换进度）
+			歌词（点击词，切换歌词界面，根据实时进度自动滚动歌词）
+			喜欢 (有浮出爱心效果)
+			分享（调用分享）
+		-->
+			<div class="container">
+				<div id="disc_bg">
+					<img src="cover/190892.jpg" />
+				</div>
+				<div class="disc_title">
+					<h3>歌曲:离人愁</h3>
+					<p id="author">演唱者：李袁杰</p>
+					<p>来&nbsp;&nbsp;&nbsp;源：网易云音乐榜单</p>
+					<!--分享-->
+					<div class=" fa fa-share-alt  share fa-3x"></div> 
+					<!--喜欢 	 icon-heart-empty-->
+					<div class="fa fa-heart-o love fa-3x"></div>
+					<div class="lrc_btn">词</div>
+				</div>
+					<div class="lrc">
+						<p>听海 - The One<br />
+								作词：林秋离  <br />
+								作曲：涂惠源<br />
+								写信告诉我今天 海是什么颜色<br />
+								夜夜陪着你的海 心情又如何<br />
+								灰色是不想说 蓝色是忧郁<br />
+								而漂泊的你 狂浪的心 停在哪里<br />
+								写信告诉我今夜 你想要梦什么<br />
+								梦里外的我是否 都让你无从选择<br />
+								我揪着一颗心 整夜都闭不了眼睛<br />
+								为何你明明动了情 却又不靠近<br />
+						</p>
+					</div>
+				<!--原进度，已隐藏-->
+				<audio src="audio/李袁杰 - 离人愁.mp3"class="music" ></audio>
+				<!--自定义进度条-->
+				<div class="disc_progress">
+					<div class="progress">
+						<div class="fa fa-circle"style="float: right;color: #fff;font-size: 25px;margin-top: -2px;"></div>
+					</div>
+				</div>
+				<!-- 播放进度时间 -->
+				<div class="time">
+					<p id="time_of">0:00</p>
+				<!-- 总时长 -->
+				<p id="time_length">0:00</p>
+				</div>
+				<!--主要功能区 -->
+				<div class="play_pause">
+					<!-- 后退10s -->
+					<!--<button class="fa fa-fast-backward  fa-3x back"></button>-->
+					<!--上一首 -->
+					<button class="fa fa-step-backward fa-2x track"></button>
+					<!--播放-->
+					<!--暂停 icon-pause -->
+					<button class="fa fa-play-circle-o fa-4x pause"></button>
+					<!--下一首-->
+					<button class="fa fa-step-forward fa-2x next"></button>
+					<!--快进10s-->
+					<!--<button class="	fa fa-fast-forward fa-2x fast"></button>-->
+					<!--控制音量-->
+					<button class="fa fa-volume-up fa-2x volume_btn"></button>
+					<!--音量条-->
+					<div class="volume_bg">
+						<div class="volume"></div>
+					</div>
+				</div>
+			</div>
+	</body>
+			 <script src="js/main.js"></script>
+</html>
